@@ -1,0 +1,19 @@
+{
+    "name": "progmem_far",
+    "version": "1.0.0",
+    "keywords": { "PROGMEM", "flash" }
+    "description": "PROGMEM macro to pushes data to far end of flash",
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/felias-fogg/progmem_far.git"
+    },
+    "authors": [
+	{
+	    "name": "Bernhard Nebel",
+	    "url": "http://hinterm-ziel.de/",
+	    "maintainer": true
+	}
+    ],
+    "frameworks": "arduino",
+    "platforms": "Atmel AVR"
+}
