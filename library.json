@@ -1,6 +1,6 @@
 {
     "name": "progmem_far",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": { "PROGMEM", "flash" }
     "description": "PROGMEM macro to pushes data to far end of flash",
     "repository": {
