@@ -15,12 +15,13 @@ void setup () {
   Serial.begin(19200);
   Serial.println("\nPROGMEM_FAR test");
 
-  do {
-    c = pgm_read_byte_far(hello_far);
-    hello_far++;
+  for (int i=0; i < strlen_PF(hello_far); i++) {
+    c = pgm_read_byte_far(hello_far+i);
     Serial.write(c);
-  } while (c != 0);
+  }
+  
   Serial.println();
+
   do {
     val = pgm_read_dword_far(table_far);
     table_far += 4;

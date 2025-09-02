@@ -1,6 +1,6 @@
 /* Arduino library: progmem_far.h
  *
- * Version: 1.0.1
+ * Version: 1.0.2
  *
  * Copyright: Bernhard Nebel 2025
  *
@@ -19,9 +19,13 @@
  *
  * v1.0.1
  * - renamed the termination function to something hopefully not clashing wit the user sketch
- * - added weak attribute so that it can be imported into more thna one translation unit
+ * - added weak attribute so that it can be imported into more than one translation unit
  * - put an include guard around it
  *
+ * v1.0.2
+ * - added an example sketch demonstrating the silent failures 
+ * - added another example that demonstrates the simple fix by using PROGMEM_FAR
+ * - renamed the termination function once more
  */
 
 #ifndef PROGMEM_FAR_H
@@ -33,8 +37,8 @@
 // In order to make sure that after program termination, we end up in an
 // infinite loop, we make use of the user-definable section .fini1, which
 // is placed immediately before .fini0
-void __terminate_program__(void) __attribute__((naked, section(".fini1"), used, weak));
-void __terminate_program__(void)
+void __terminate_program_before_entering_progmem_section__(void) __attribute__((naked, section(".fini1"), used, weak));
+void __terminate_program_before_entering_progmem_section__(void)
 {
   while(1);
 }
