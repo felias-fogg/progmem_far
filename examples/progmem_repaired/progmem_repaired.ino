@@ -11,7 +11,7 @@
 // 8B76
 // 162
 
-#include <pgmspace.h>
+#include <avr/pgmspace.h>
 #include <progmem_far.h> 
 
 const byte tab0[5] PROGMEM = { 1, 2, 3};

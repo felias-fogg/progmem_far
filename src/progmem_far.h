@@ -26,6 +26,9 @@
  * - added an example sketch demonstrating the silent failures 
  * - added another example that demonstrates the simple fix by using PROGMEM_FAR
  * - renamed the termination function once more
+ *
+ * v1.0.3
+ * - fixed includes for example sketches
  */
 
 #ifndef PROGMEM_FAR_H

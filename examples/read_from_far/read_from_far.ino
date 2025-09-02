@@ -1,4 +1,4 @@
-// Example for using the PROGMEM_FAR macro
+// Example using the PROGMEM_FAR macro
 
 #include <avr/pgmspace.h>
 #include <progmem_far.h>

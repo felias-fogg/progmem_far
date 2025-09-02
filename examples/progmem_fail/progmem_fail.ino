@@ -18,7 +18,7 @@
 // 162
 
 
-#include <pgmspace.h>
+#include <avr/pgmspace.h>
 
 const byte tab0[5] PROGMEM = { 1, 2, 3};
 const byte tab1[32767] PROGMEM = {  };
