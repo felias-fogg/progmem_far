@@ -29,6 +29,9 @@
  *
  * v1.0.3
  * - fixed includes for example sketches
+ *
+ * v1.0.4
+ * - added CLI in termination code
  */
 
 #ifndef PROGMEM_FAR_H
@@ -43,6 +46,7 @@
 void __terminate_program_before_entering_progmem_section__(void) __attribute__((naked, section(".fini1"), used, weak));
 void __terminate_program_before_entering_progmem_section__(void)
 {
+  cli();
   while(1);
 }
 
